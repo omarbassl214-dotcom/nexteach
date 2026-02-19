@@ -30,9 +30,10 @@ export default function Scene() {
             {/* The Artifact */}
             <Portal
                 destination="/about"
-                label="ENTER"
+                label=""
                 position={[0, 0, 0]}
                 showCore={true}
+                scale={1.8}
             />
 
             {/* Ground Shadow for "Heavy Object" feel */}
