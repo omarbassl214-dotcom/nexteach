@@ -39,21 +39,10 @@ export default function Contact() {
                         <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
                         <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
 
-                        <div className="space-y-8 font-inter">
+                        <div className="space-y-8 font-inter text-center">
                             <div>
                                 <p className="text-sm uppercase tracking-widest text-white/50 mb-2">Email Access</p>
-                                <a href="mailto:contact@ahmad.dev" className="text-2xl md:text-3xl font-bold text-white hover:text-blue-400 transition-colors">contact@ahmad.dev</a>
-                            </div>
-
-                            <div className="flex gap-8">
-                                <div>
-                                    <p className="text-sm uppercase tracking-widest text-white/50 mb-2">GitHub</p>
-                                    <a href="#" className="text-lg text-white hover:text-blue-400 transition-colors">@ahmad-dev</a>
-                                </div>
-                                <div>
-                                    <p className="text-sm uppercase tracking-widest text-white/50 mb-2">LinkedIn</p>
-                                    <a href="#" className="text-lg text-white hover:text-blue-400 transition-colors">/in/ahmad</a>
-                                </div>
+                                <a href="mailto:agencynextech@gmail.com" className="text-2xl md:text-3xl font-bold text-white hover:text-blue-400 transition-colors">agencynextech@gmail.com</a>
                             </div>
                         </div>
                     </div>
