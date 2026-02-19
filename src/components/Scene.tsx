@@ -31,9 +31,9 @@ export default function Scene() {
             <Portal
                 destination="/about"
                 label=""
-                position={[0, 0, 0]}
+                position={[0, -0.4, 0]} // Slight downward offset for visual balance
                 showCore={true}
-                scale={1.8}
+                scale={1.3} // Scaled down for breathing room
             />
 
             {/* Ground Shadow for "Heavy Object" feel */}
