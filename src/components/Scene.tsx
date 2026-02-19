@@ -28,13 +28,32 @@ export default function Scene() {
             <Stars radius={100} depth={50} count={2000} factor={4} saturation={0} fade speed={1} />
 
             {/* The Artifact */}
-            <Portal
-                destination="/about"
-                label=""
-                position={[0, -0.4, 0]} // Slight downward offset for visual balance
-                showCore={true}
-                scale={1.3} // Scaled down for breathing room
-            />
+            {/* Navigation Orbs */}
+            <group position={[0, -0.2, 0]}>
+                <Portal
+                    destination="/works"
+                    label="PORTFOLIO"
+                    position={[-3.5, 0, 0]}
+                    scale={1.1}
+                    fontSize="0.8rem"
+                    isSideLayout={true}
+                />
+                <Portal
+                    destination="/about"
+                    label="ABOUT US"
+                    position={[0, 0.5, 0]}
+                    scale={1.3}
+                    showCore={true}
+                />
+                <Portal
+                    destination="/contact"
+                    label="CONTACT"
+                    position={[3.5, 0, 0]}
+                    scale={1.1}
+                    fontSize="0.8rem"
+                    isSideLayout={true}
+                />
+            </group>
 
             {/* Ground Shadow for "Heavy Object" feel */}
             <ContactShadows position={[0, -2.5, 0]} opacity={0.5} scale={10} blur={2.5} far={4} />

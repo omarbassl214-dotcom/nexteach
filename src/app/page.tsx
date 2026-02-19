@@ -40,22 +40,12 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Global Navigation - Bottom */}
-        <div className="flex flex-col items-center gap-12 pointer-events-auto w-full">
-          <nav className="flex items-center justify-center gap-8 md:gap-16">
-            <Link href="/works" className="group flex flex-col items-center gap-3 no-underline">
-              <span className="text-xs font-rajdhani tracking-[0.3em] text-white/50 group-hover:text-white transition-all transform group-hover:-translate-y-1">PORTFOLIO</span>
-              <div className="w-1 h-1 bg-white/20 rounded-full group-hover:w-8 group-hover:bg-white transition-all duration-500" />
-            </Link>
-            <Link href="/about" className="group flex flex-col items-center gap-3 no-underline">
-              <span className="text-xs font-rajdhani tracking-[0.3em] text-white/50 group-hover:text-white transition-all transform group-hover:-translate-y-1">ABOUT WE</span>
-              <div className="w-1 h-1 bg-white/20 rounded-full group-hover:w-8 group-hover:bg-white transition-all duration-500" />
-            </Link>
-            <Link href="/contact" className="group flex flex-col items-center gap-3 no-underline">
-              <span className="text-xs font-rajdhani tracking-[0.3em] text-white/50 group-hover:text-white transition-all transform group-hover:-translate-y-1">CONTACT</span>
-              <div className="w-1 h-1 bg-white/20 rounded-full group-hover:w-8 group-hover:bg-white transition-all duration-500" />
-            </Link>
-          </nav>
+        {/* Navigation Instructions - Bottom */}
+        <div className="flex flex-col items-center gap-4 pointer-events-auto w-full">
+          <p className="text-white/30 font-rajdhani text-xs tracking-[0.3em] uppercase transition-opacity duration-1000 animate-pulse">
+            Click on the orbs to navigate through the website
+          </p>
+          <div className="w-1 h-1 bg-white/20 rounded-full" />
         </div>
 
       </div>
