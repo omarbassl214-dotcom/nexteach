@@ -16,7 +16,7 @@ export default function Contact() {
 
     return (
         <main className="relative w-full h-screen overflow-hidden text-white">
-            <ContactScene />
+            {mounted && <ContactScene />}
 
             <div className={`absolute inset-0 flex items-center justify-start px-8 md:px-20 transition-opacity duration-1000 ${mounted ? 'opacity-100' : 'opacity-0'} pointer-events-none z-10 page-content`}>
 

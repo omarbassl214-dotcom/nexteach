@@ -22,7 +22,7 @@ export default function Works() {
 
     return (
         <main className="relative w-full h-screen overflow-hidden text-white">
-            <WorksScene />
+            {mounted && <WorksScene />}
 
             <div className={`absolute inset-0 transition-opacity duration-1000 ${mounted ? 'opacity-100' : 'opacity-0'} pointer-events-none z-10 page-content`}>
                 {/* Top Right Navigation */}
