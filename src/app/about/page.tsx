@@ -42,16 +42,10 @@ export default function About() {
 
                         <div className="space-y-6 text-lg md:text-xl font-light text-white/80 leading-relaxed font-inter">
                             <p>
-                                I don't just write code; I craft <span className="text-white font-semibold glow">digital realms</span>.
+                                With three years of dedicated experience in the digital landscape, <span className="text-white font-semibold glow">Nextech</span> is a full-service agency built on the intersection of creative design and robust engineering. We specialize in crafting high-end, full-stack solutions that translate complex ideas into seamless user experiences. Our mission is to provide our global partners—from the US to local markets—with the scalable digital infrastructure they need to stand out.
                             </p>
                             <p>
-                                My name is <span className="text-white font-semibold">Ahmad</span>, and I specialize in building immersive digital experiences that blend high-performance engineering with premium aesthetics.
-                            </p>
-                            <p>
-                                With a background in both design and full-stack development, I approach every project as a unique universe to be explored. From the rigid security of <span className="text-white font-semibold">Perfect Protocol</span> to the fluid elegance of <span className="text-white font-semibold">Luxurious Towing</span>, my work adapts to the core essence of the problem.
-                            </p>
-                            <p>
-                                This portfolio itself is a testament to my belief: the web should be a place of wonder, not just information.
+                                At Nextech, we don't just build websites; we <span className="text-white font-semibold">engineer digital destinations</span>. Every line of code and every interactive detail is driven by our commitment to precision, modern aesthetics, and high-performance results.
                             </p>
                         </div>
                     </div>
@@ -62,3 +56,4 @@ export default function About() {
         </main>
     );
 }
+D
