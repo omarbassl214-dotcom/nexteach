@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useState, useEffect } from "react";
 import Scene from "@/components/Scene";
