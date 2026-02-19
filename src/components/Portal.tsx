@@ -229,7 +229,6 @@ export default function Portal({
                     color="white"
                     anchorX="center"
                     anchorY="middle"
-                    font="/fonts/Rajdhani-Bold.ttf"
                     fillOpacity={hovered ? 1 : 0.4}
                 >
                     {label.toUpperCase()}
