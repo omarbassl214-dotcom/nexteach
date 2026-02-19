@@ -32,7 +32,7 @@ export default function Scene() {
             <group position={[0, -0.2, 0]}>
                 <Portal
                     destination="/works"
-                    label="PORTFOLIO"
+                    label="OUR WORK"
                     position={[-4.5, 0, 0]}
                     scale={1.1}
                 />
@@ -45,7 +45,7 @@ export default function Scene() {
                 />
                 <Portal
                     destination="/contact"
-                    label="CONTACT"
+                    label="CONTACT US"
                     position={[4.5, 0, 0]}
                     scale={1.1}
                 />

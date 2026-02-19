@@ -49,7 +49,7 @@ export default function Overlay({ portalOpen }: OverlayProps) {
                                 animate={{ y: 0, opacity: 1 }}
                                 transition={{ delay: 0.3 }}
                             >
-                                Ahmad.
+                                Nexteach.
                             </motion.h1>
                             <motion.p
                                 className={styles.subtitle}
@@ -76,7 +76,7 @@ export default function Overlay({ portalOpen }: OverlayProps) {
                                     className={`${styles.navButton} ${activeTab === 'about' ? styles.navButtonActive : ''}`}
                                     onClick={() => setActiveTab('about')}
                                 >
-                                    About Me
+                                    About Us
                                 </button>
                                 <button
                                     className={`${styles.navButton} ${activeTab === 'contact' ? styles.navButtonActive : ''}`}
@@ -118,10 +118,10 @@ export default function Overlay({ portalOpen }: OverlayProps) {
                                         exit={{ x: -20, opacity: 0 }}
                                     >
                                         <p style={{ color: '#ddd', lineHeight: '1.8', fontSize: '1.1rem' }}>
-                                            I specialize in building digital products that blend high-performance engineering with premium aesthetics.
+                                            We specialize in building digital products that blend high-performance engineering with premium aesthetics.
                                             <br /><br />
-                                            My approach is rooted in precision ("Perfect Protocol"), scale ("Heavy Production"), and experience ("Luxurious Towing").
-                                            I don't just write code; I craft environments. Use this portal to explore my world.
+                                            Our approach is rooted in precision ("Perfect Protocol"), scale ("Heavy Production"), and experience ("Luxurious Towing").
+                                            We don't just write code; we craft environments. Use this portal to explore our world.
                                         </p>
                                     </motion.div>
                                 )}

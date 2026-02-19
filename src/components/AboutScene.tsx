@@ -30,7 +30,7 @@ export default function AboutScene() {
                 {/* Positioned nicely in the center but not blocking text too much */}
                 <Portal
                     destination="/works"
-                    label="MY WORK" // Shorter Label
+                    label="OUR WORK"
                     position={[3.5, 0, 0]} // Standardized side position
                     scale={1.1} // Standardized side scale
                     fontSize="1.25rem" // Much smaller text

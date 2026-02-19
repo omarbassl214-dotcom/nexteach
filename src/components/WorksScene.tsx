@@ -36,7 +36,7 @@ export default function WorksScene() {
                 {/* CONTACT ME - Moved down to center-right */}
                 <Portal
                     destination="/contact"
-                    label="CONTACT ME"
+                    label="CONTACT US"
                     position={[3.5, 0, 0]}
                     scale={1.1}
                     fontSize="0.8rem"
