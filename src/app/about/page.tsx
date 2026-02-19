@@ -31,7 +31,7 @@ export default function About() {
 
                     {/* Header - The Monolith Typography */}
                     <h1 className="text-6xl md:text-8xl font-bold font-rajdhani mb-8 tracking-tighter leading-none text-transparent bg-clip-text bg-gradient-to-r from-white to-white/50 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
-                        WHO AM I?
+                        WHO ARE WE?
                     </h1>
 
                     {/* Glass Card */}
