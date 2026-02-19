@@ -7,8 +7,8 @@ import { Suspense } from "react";
 // const rajdhani = Rajdhani({ ... });
 
 export const metadata: Metadata = {
-  title: "Ahmad's Portfolio",
-  description: "Interactive 3D Experience",
+  title: "Nexteach",
+  description: "High-End Digital Solutions & 3D Experiences",
 };
 
 export default function RootLayout({
