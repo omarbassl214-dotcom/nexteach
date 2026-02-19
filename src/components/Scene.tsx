@@ -33,10 +33,8 @@ export default function Scene() {
                 <Portal
                     destination="/works"
                     label="PORTFOLIO"
-                    position={[-3.5, 0, 0]}
+                    position={[-4.5, 0, 0]}
                     scale={1.1}
-                    fontSize="0.8rem"
-                    isSideLayout={true}
                 />
                 <Portal
                     destination="/about"
@@ -48,10 +46,8 @@ export default function Scene() {
                 <Portal
                     destination="/contact"
                     label="CONTACT"
-                    position={[3.5, 0, 0]}
+                    position={[4.5, 0, 0]}
                     scale={1.1}
-                    fontSize="0.8rem"
-                    isSideLayout={true}
                 />
             </group>
 

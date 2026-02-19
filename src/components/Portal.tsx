@@ -2,7 +2,7 @@
 
 import { useRef, useState, useEffect, Suspense } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
-import { Html, MeshDistortMaterial } from "@react-three/drei";
+import { Html, MeshDistortMaterial, Text } from "@react-three/drei";
 import * as THREE from "three";
 import { useRouter } from "next/navigation";
 import gsap from "gsap";
@@ -219,6 +219,22 @@ export default function Portal({
                         }}
                     />
                 </Html>
+            )}
+
+            {/* Label - Positioned UNDER the orb */}
+            {label && (
+                <Text
+                    position={[0, -1.8, 0]}
+                    fontSize={0.2}
+                    color="white"
+                    anchorX="center"
+                    anchorY="middle"
+                    font="/fonts/Rajdhani-Bold.ttf"
+                    fillOpacity={hovered ? 1 : 0.4}
+                >
+                    {label.toUpperCase()}
+                    <meshBasicMaterial transparent opacity={active ? 0 : (hovered ? 1 : 0.4)} />
+                </Text>
             )}
         </group>
     );
