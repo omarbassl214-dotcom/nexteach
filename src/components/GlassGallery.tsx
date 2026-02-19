@@ -10,9 +10,10 @@ interface GalleryItemProps {
     index: number;
     count: number;
     position: [number, number, number];
+    link: string;
 }
 
-function ChromeOrb({ title, desc, index, count, position }: GalleryItemProps) {
+function ChromeOrb({ title, desc, index, count, position, link }: GalleryItemProps) {
     const meshRef = useRef<THREE.Mesh>(null!);
     const materialRef = useRef<any>(null!);
     const textGroupRef = useRef<THREE.Group>(null!);
@@ -63,8 +64,15 @@ function ChromeOrb({ title, desc, index, count, position }: GalleryItemProps) {
             <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
                 <mesh
                     ref={meshRef}
-                    onPointerOver={() => setHover(true)}
-                    onPointerOut={() => setHover(false)}
+                    onPointerOver={() => {
+                        setHover(true);
+                        document.body.style.cursor = 'pointer';
+                    }}
+                    onPointerOut={() => {
+                        setHover(false);
+                        document.body.style.cursor = 'auto';
+                    }}
+                    onClick={() => window.open(link, '_blank')}
                 >
                     <sphereGeometry args={[0.3, 32, 32]} />
                     <MeshDistortMaterial
@@ -114,9 +122,9 @@ function ChromeOrb({ title, desc, index, count, position }: GalleryItemProps) {
 
 export default function GlassGallery() {
     const projects = [
-        { title: "Luxurious Towing", desc: "High-End Automotive Service Platform" },
-        { title: "Perfect Protocol", desc: "Cybersecurity & Encryption Interface" },
-        { title: "Atmospheric Drop", desc: "Interactive 3D Weather Simulation" },
+        { title: "Luxurious Towing", desc: "High-End Automotive Service Platform", link: "https://luxurioustowing.com/" },
+        { title: "Perfect Protocol", desc: "Ushring Company / Service Excellence", link: "http://perfect-protocol.com/" },
+        { title: "AV Production", desc: "Multimedia & Audiovisual Production", link: "https://omarbassl214-dotcom.github.io/av-production/" },
     ];
 
     return (
@@ -129,6 +137,7 @@ export default function GlassGallery() {
                     index={i}
                     count={projects.length}
                     position={[0, -i * 1.1, 0]} // Stacked top-down
+                    link={p.link}
                 />
             ))}
         </group>

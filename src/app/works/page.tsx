@@ -15,9 +15,9 @@ export default function Works() {
     }, []);
 
     const projects = [
-        { title: "Luxurious Towing", desc: "High-End Automotive Service Platform", link: "#" },
-        { title: "Perfect Protocol", desc: "Cybersecurity & Encryption Interface", link: "#" },
-        { title: "Atmospheric Drop", desc: "Interactive 3D Weather Simulation", link: "#" },
+        { title: "Luxurious Towing", desc: "High-End Automotive Service Platform", link: "https://luxurioustowing.com/" },
+        { title: "Perfect Protocol", desc: "Ushring Company / Service Excellence", link: "http://perfect-protocol.com/" },
+        { title: "AV Production", desc: "Multimedia & Audiovisual Production", link: "https://omarbassl214-dotcom.github.io/av-production/" },
     ];
 
     return (
