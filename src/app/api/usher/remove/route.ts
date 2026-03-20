@@ -12,7 +12,7 @@ export async function POST(request: Request) {
             return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
         }
 
-        // 1. Remove from KV ushers
+        // 1. Remove from ushers
         await removeLiveUsher(categoryId, eventId, usherName);
 
         // 2. Update central registry index

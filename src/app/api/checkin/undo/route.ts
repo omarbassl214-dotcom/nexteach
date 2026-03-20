@@ -47,29 +47,14 @@ export async function POST(request: Request) {
             // Ignore write errors in production
         }
 
-        // 1. Remove from KV checkins (Exhaustive removal of all possible "Ghosts")
+        // 1. Remove from checkins
         const guest = guests[guestIndex];
         const firstName = (guest as any).firstName || "";
         const lastName = (guest as any).lastName || "";
         const fullName = (guest as any).name || `${firstName} ${lastName}`.trim();
         
-        // Remove ID, Full Name, and Trimmed variants
-        await removeLiveCheckin(categoryId, eventId, guestId, fullName);
+        await removeLiveCheckin(categoryId, eventId, guestId);
         
-        // Extra careful: remove case-insensitive variants if they might exist
-        const kv = (await import("@/lib/storage")).getKV();
-        if (kv) {
-            const key = `checkins:${categoryId}:${eventId}`;
-            await Promise.all([
-                kv.srem(key, fullName.toLowerCase()),
-                kv.srem(key, fullName.toUpperCase()),
-                kv.srem(key, guestId.toString())
-            ]);
-        }
-        
-        // 2. Remove from KV guest names (for usher dashboard)
-        await removeLiveGuestName(categoryId, eventId, guestId, fullName);
-
         // 3. Update central registry index
         const { updateIndexEvent } = await import("@/lib/registry");
         

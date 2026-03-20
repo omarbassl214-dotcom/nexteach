@@ -40,17 +40,17 @@ export async function POST(request: Request) {
             }
         }
 
-        // Always update KV if in Vercel
+        // 1. Add to checkins
         await addLiveCheckin(categoryId, eventId, guestId);
         
         const guest = guests[guestIndex];
         const guestName = (guest as any).name || `${(guest as any).firstName || ""} ${(guest as any).lastName || ""}`.trim() || `Guest ${guest.id}`;
         
-        // 2. Add to KV guest names (for usher dashboard)
+        // 2. Add to guest names
         const { addLiveGuestName } = await import("@/lib/storage");
         await addLiveGuestName(categoryId, eventId, guestId, guestName);
 
-        // 3. Update central registry index for performance
+        // 3. Update central registry index
         const { updateIndexEvent } = await import("@/lib/registry");
         
         let checkedInCount = 0;

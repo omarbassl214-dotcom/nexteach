@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import QRCodeDisplay from "./QRCodeDisplay";
 import StatusToggle from "./StatusToggle";
 
 interface EventData {
@@ -505,13 +504,12 @@ export default function AdminEventList({
                                 </div>
                             </div>
                         
-                            <div className="shrink-0 sm:pl-8 border-t sm:border-t-0 sm:border-l border-admin-border pt-6 sm:pt-0 w-full sm:w-auto flex flex-row items-center justify-center sm:justify-start gap-6 sm:gap-4">
                                 <div className="flex flex-col items-center">
                                     <p className="text-[9px] font-bold text-white uppercase tracking-widest mb-2 flex items-center gap-1.5">
                                         Guest Node
                                     </p>
-                                    <div className="bg-white/5 p-1 rounded-lg border border-white/5 group-hover:border-brand-green/40 transition-colors">
-                                        <QRCodeDisplay path={event.publicPath} eventName={event.name} size={60} />
+                                    <div className="bg-white/5 p-4 rounded-lg border border-white/5 group-hover:border-brand-green/40 transition-colors">
+                                        <Link href={event.publicPath} target="_blank" className="text-[10px] text-white/50 hover:text-white underline tracking-tighter uppercase font-bold">Open Link</Link>
                                     </div>
                                 </div>
 
@@ -519,11 +517,10 @@ export default function AdminEventList({
                                     <p className="text-[9px] font-bold text-white uppercase tracking-widest mb-2 flex items-center gap-1.5">
                                         Usher Node
                                     </p>
-                                    <div className="bg-white/5 p-1 rounded-lg border border-white/5 group-hover:border-brand-green/60 transition-colors">
-                                        <QRCodeDisplay path={event.usherPath} eventName={`${event.name} - Usher`} size={60} />
+                                    <div className="bg-white/5 p-4 rounded-lg border border-white/5 group-hover:border-brand-green/60 transition-colors">
+                                       <Link href={event.usherPath} target="_blank" className="text-[10px] text-white/50 hover:text-white underline tracking-tighter uppercase font-bold">Open Link</Link>
                                     </div>
                                 </div>
-                            </div>
                         </div>
                     </motion.div>
                 ))}
