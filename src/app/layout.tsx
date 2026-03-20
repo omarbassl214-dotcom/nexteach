@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import { Suspense } from "react";
+import { AmbientBackground } from "@/components/AmbientBackground";
 
-// Bypassing Google Fonts to fix Turbopack crash
-// const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-// const rajdhani = Rajdhani({ ... });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 
 export const metadata: Metadata = {
-  title: "Nexteach",
-  description: "High-End Digital Solutions & 3D Experiences",
+  title: "Perfect Protocol - Premium Event Access",
+  description: "Exclusive event check-in and seating coordination by Perfect Protocol.",
 };
 
 export default function RootLayout({
@@ -17,11 +17,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="antialiased text-white bg-black font-sans">
-        <Suspense fallback={null}>
-          {children}
-        </Suspense>
+    <html lang="en" className={`dark ${inter.variable} ${playfair.variable}`}>
+      <body
+        className={`antialiased selection:bg-white/30 selection:text-white bg-obsidian text-white min-h-screen flex flex-col font-sans relative`}
+      >
+        <AmbientBackground />
+        {children}
       </body>
     </html>
   );
